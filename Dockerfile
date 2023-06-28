@@ -11,7 +11,7 @@ COPY unidbg-fetch-qsign /app
 COPY txlib /app/txlib
 
 # 设置命令
-CMD bash bin/unidbg-fetch-qsign --port=7860 --count=1 --library=txlib/8.9.63 --android_id=IL.1621888.3540
+CMD bash bin/unidbg-fetch-qsign --host=0.0.0.0 --port=7860 --count=2 --library=txlib/8.9.63 --android_id=IL.1621888.3540
 
 # 暴露端口
 EXPOSE 7860
