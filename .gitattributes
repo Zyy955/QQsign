@@ -37,3 +37,7 @@ lib/kotlin-reflect-1.8.10.jar filter=lfs diff=lfs merge=lfs -text
 lib/kotlin-stdlib-1.8.22.jar filter=lfs diff=lfs merge=lfs -text
 lib/kotlinx-coroutines-core-jvm-1.7.1.jar filter=lfs diff=lfs merge=lfs -text
 lib/unidbg-fix.jar filter=lfs diff=lfs merge=lfs -text
+unidbg-fetch-qsign/lib/kotlin-reflect-1.8.10.jar filter=lfs diff=lfs merge=lfs -text
+unidbg-fetch-qsign/lib/kotlin-stdlib-1.8.22.jar filter=lfs diff=lfs merge=lfs -text
+unidbg-fetch-qsign/lib/kotlinx-coroutines-core-jvm-1.7.1.jar filter=lfs diff=lfs merge=lfs -text
+unidbg-fetch-qsign/lib/unidbg-fix.jar filter=lfs diff=lfs merge=lfs -text
