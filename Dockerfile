@@ -10,6 +10,11 @@ WORKDIR /app
 COPY unidbg-fetch-qsign /app
 COPY txlib /app/txlib
 
+# 设置变量
+ARG COUNT
+ARG TXLIB_VERSION
+ARG ANDROID_ID
+
 # 设置命令
 CMD bash "bin/unidbg-fetch-qsign --host=0.0.0.0 --port=7860 --count=$COUNT --library=txlib/$TXLIB_VERSION --android_id=$ANDROID_ID"
 
