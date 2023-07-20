@@ -17,5 +17,4 @@ RUN wget -O sign.zip https://github.com/fuqiuluo/unidbg-fetch-qsign/releases/dow
     unzip sign.zip
 
 # 在这里要选好QQ协议的版本
-CMD [ "bash","/code/unidbg-fetch-qsign-shadow-1.1.5/bin/unidbg-fetch-qsign","--basePath=/code/unidbg-fetch-qsign-shadow-1.1.5/txlib/$TXLIB_VERSION"]
-  
+CMD [ "bash","/code/unidbg-fetch-qsign-shadow-1.1.5/bin/unidbg-fetch-qsign","--basePath=/code/unidbg-fetch-qsign-shadow-1.1.5/txlib/8.9.68"]
