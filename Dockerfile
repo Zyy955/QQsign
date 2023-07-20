@@ -6,6 +6,8 @@ ENV TZ Asia/Shanghai
 # Set working directory
 WORKDIR /app
 
+RUN chmod 755 /app
+
 # Copy the unpacked package and txlib to the working directory
 COPY unidbg-fetch-qsign /app
 COPY txlib /app/txlib
