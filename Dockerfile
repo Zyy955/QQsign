@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk
+FROM openjdk:22-slim-bookworm
 
 # Set timezone
 ENV TZ Asia/Shanghai
@@ -9,8 +9,6 @@ WORKDIR /app
 # Copy the unpacked package and txlib to the working directory
 COPY unidbg-fetch-qsign /app
 COPY txlib /app/txlib
-
-RUN chmod 755 /app
 
 # Set the command
 CMD bash bin/unidbg-fetch-qsign --basePath=txlib/$TXLIB_VERSION
