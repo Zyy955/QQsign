@@ -1,4 +1,4 @@
-FROM openjdk:11.0-jdk
+FROM openjdk:8-jdk
 
 # Set timezone
 ENV TZ Asia/Shanghai
