@@ -1,17 +1,20 @@
 FROM openjdk:11.0-jdk
 
-# 设置时区
+# Install gosu
+RUN apt-get update && apt-get install -y gosu
+
+# Set timezone
 ENV TZ Asia/Shanghai
 
-# 设置工作目录
+# Set working directory
 WORKDIR /app
 
-# 复制解压包和txlib到工作目录
+# Copy the unpacked package and txlib to the working directory
 COPY unidbg-fetch-qsign /app
 COPY txlib /app/txlib
 
-# 设置命令
-CMD bash bin/unidbg-fetch-qsign --basePath=txlib/$TXLIB_VERSION
+# Set the command
+CMD gosu root bash bin/unidbg-fetch-qsign --basePath=txlib/$TXLIB_VERSION
 
-# 暴露端口
+#pose port
 EXPOSE 7860
