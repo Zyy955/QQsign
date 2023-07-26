@@ -63,7 +63,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\unidbg-fetch-qsign-1.1.5-all.jar
+set CLASSPATH=%APP_HOME%\lib\unidbg-fetch-qsign-1.1.7-all.jar
 
 @rem Execute unidbg-fetch-qsign
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %UNIDBG_FETCH_QSIGN_OPTS%  -jar "%CLASSPATH%" %CMD_LINE_ARGS%
