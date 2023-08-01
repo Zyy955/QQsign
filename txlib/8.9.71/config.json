@@ -4,7 +4,7 @@
     "port": 7860
   },
   "key": "114514",
-  "auto_register": true,
+  "auto_register": false,
   "protocol": {
     "qua": "V1_AND_SQ_8.9.71_4332_YYB_D",
     "version": "8.9.71",
