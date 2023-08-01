@@ -10,11 +10,8 @@ WORKDIR /app
 COPY unidbg-fetch-qsign /app
 COPY txlib /app/txlib
 
-# 设置权限
-RUN chmod +wt /app/txlib/$TXLIB_VERSION
-
 # 设置命令
-CMD sed -i "s/\"key\": \".*\"/\"key\": \"$KEY_VALUE\"/" txlib/$TXLIB_VERSION/config.json
+# CMD sed -i "s/\"key\": \".*\"/\"key\": \"$KEY_VALUE\"/" txlib/$TXLIB_VERSION/config.json
 CMD bash bin/unidbg-fetch-qsign --basePath=txlib/$TXLIB_VERSION
 
 # 暴露端口
