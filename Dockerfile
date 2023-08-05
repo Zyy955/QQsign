@@ -12,8 +12,11 @@ COPY lib /app/lib
 COPY txlib /app/txlib
 
 # 设置命令
-RUN chmod +x /app/bin/unidbg-fetch-qsign && /app/bin/unidbg-fetch-qsign --basePath=/app/txlib/$TXLIB_VERSION
+RUN chmod -R +w /
 RUN sed 's/"key": ".*"/"key": "123456"/' txlib/$TXLIB_VERSION/config.json > /app/txlib/$TXLIB_VERSION/config.json
+
+# 运行
+CMD bash bin/unidbg-fetch-qsign --basePath=txlib/$TXLIB_VERSION
 
 # 暴露端口
 EXPOSE 7860
