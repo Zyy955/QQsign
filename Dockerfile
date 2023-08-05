@@ -7,8 +7,8 @@ ENV TZ Asia/Shanghai
 WORKDIR /app
 
 # 复制文件到工作目录
-COPY bin /app
-COPY lib /app
+COPY bin /app/bin
+COPY lib /app/lib
 COPY txlib /app/txlib
 
 # 设置命令
