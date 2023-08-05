@@ -16,7 +16,7 @@ CMD chmod -R +w txlib
 
 # 设置命令
 CMD bash bin/unidbg-fetch-qsign --basePath=txlib/$TXLIB_VERSION
-CMD sed 's/"key": ".*"/"key": "123456"/' txlib/$TXLIB_VERSION/config.json > /app/txlib/$TXLIB_VERSION/config.json
+CMD sed 's/"key": ".*"/"key": "123456"/' txlib/$TXLIB_VERSION/config.json > /txlib/$TXLIB_VERSION/config.json
 
 # 暴露端口
 EXPOSE 7860
