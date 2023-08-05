@@ -12,7 +12,7 @@ COPY lib /app/lib
 COPY txlib /app/txlib
 
 # 设置命令
-CMD sed -i 's/114514/$KEY_VALUE/g' txlib/$TXLIB_VERSION/config.json && bash bin/unidbg-fetch-qsign --basePath=txlib/$TXLIB_VERSION
+CMD sed -i 's/114514/$KEY_VALUE/g' app/txlib/$TXLIB_VERSION/config.json && bash bin/unidbg-fetch-qsign --basePath=txlib/$TXLIB_VERSION
 
 # 暴露端口
 EXPOSE 7860
