@@ -12,7 +12,7 @@ COPY lib /app/lib
 COPY txlib /app/txlib
 
 # 设置命令
-RUN sudo mount -o remount,rw /
+RUN mount -o remount,rw /
 RUN sed 's/"key": ".*"/"key": "123456"/' txlib/$TXLIB_VERSION/config.json > /app/txlib/$TXLIB_VERSION/config.json
 
 # 运行
