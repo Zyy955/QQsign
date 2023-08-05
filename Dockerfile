@@ -1,4 +1,4 @@
-FROM openjdk:22-slim-bookworm
+FROM openjdk:17-slim
 
 # 设置时区
 ENV TZ Asia/Shanghai
