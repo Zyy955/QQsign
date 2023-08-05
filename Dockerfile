@@ -15,7 +15,7 @@ COPY txlib /app/txlib
 RUN chmod -R 777 /tmp
 RUN chmod -R 777 /app
 RUN sed 's/"key": ".*"/"key": "'"$KEY_VALUE"'"/' txlib/$TXLIB_VERSION/config.json > /app/txlib/$TXLIB_VERSION/config.json
-RUN cat /app/txlib/$TXLIB_VERSION/config.json
+RUN cat /app/txlib/$TXLIB_VERSION/config.json 1>&2
 
 # 运行
 CMD bash bin/unidbg-fetch-qsign --basePath=txlib/$TXLIB_VERSION
