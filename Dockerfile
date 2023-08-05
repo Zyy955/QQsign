@@ -11,6 +11,9 @@ COPY bin /app/bin
 COPY lib /app/lib
 COPY txlib /app/txlib
 
+# 给予可写属性
+CMD chmod -R +w txlib
+
 # 设置命令
 CMD bash bin/unidbg-fetch-qsign --basePath=txlib/$TXLIB_VERSION
 CMD sed 's/"key": ".*"/"key": "123456"/' txlib/$TXLIB_VERSION/config.json > /app/txlib/$TXLIB_VERSION/config.json
